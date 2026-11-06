@@ -91,14 +91,14 @@ export const SwellAlertForm: React.FC<SwellAlertFormProps> = ({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Seu melhor e-mail"
-              className="w-full px-5 py-3.5 rounded-full bg-black/70 border border-white/20 text-white placeholder-slate-400 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-[#00F0FF] focus:border-transparent transition-all shadow-inner"
+              className="w-full min-h-[48px] px-5 py-3.5 rounded-full bg-black/80 border border-white/20 text-white placeholder-slate-400 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all shadow-inner"
             />
           </div>
 
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF] text-ocean-950 font-syne font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(46,196,182,0.6)] transition-all whitespace-nowrap cursor-pointer disabled:opacity-60 active:scale-95"
+            className="w-full sm:w-auto min-h-[48px] px-8 py-3.5 rounded-full bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF] text-black font-syne font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(46,196,182,0.6)] active:scale-95 transition-all whitespace-nowrap cursor-pointer disabled:opacity-60"
           >
             {status === 'loading' ? (
               <span className="flex items-center gap-2">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, Waves, Sparkles, ArrowDown } from 'lucide-react';
+import { ResponsiveTopBar } from './ResponsiveTopBar';
 
 interface HeroProps {
   onEnterWave: () => void;
@@ -27,16 +28,9 @@ export const Hero: React.FC<HeroProps> = ({ onEnterWave, onWatchVideos }) => {
       {/* Main Center Stage */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center pt-16 sm:pt-20">
         
-        {/* Surf Telemetry Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-cyan-400/40 backdrop-blur-md mb-6 shadow-[0_0_25px_rgba(46,196,182,0.25)]">
-          <span className="w-2 h-2 rounded-full bg-[#2EC4B6] animate-ping" />
-          <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest text-cyan-300 uppercase">
-            OLIVENÇA • ILHÉUS • BAHIA • 14°57'S 39°01'W
-          </span>
-          <span className="hidden md:inline-block text-white/30">•</span>
-          <span className="hidden md:inline-block text-[10px] sm:text-xs font-mono text-emerald-400 font-bold">
-            SWELL MONITORADO AO VIVO
-          </span>
+        {/* Surf Telemetry Pill Badge (Mobile-First Responsivo) */}
+        <div className="mb-6">
+          <ResponsiveTopBar />
         </div>
 
         {/* Centerpiece: Official Transparent Surflivre Logo */}

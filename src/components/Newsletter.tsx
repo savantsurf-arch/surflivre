@@ -62,23 +62,23 @@ export const Newsletter: React.FC = () => {
                 </select>
               </div>
 
-              {/* Email Input + Button */}
-              <div className="flex flex-col sm:flex-row items-center gap-2.5">
+              {/* Email Input + Button (Mobile-First Touch Target 48px) */}
+              <div className="flex flex-col sm:flex-row items-center gap-3 w-full">
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Seu melhor e-mail de surfista"
-                  className="w-full px-5 py-3.5 rounded-full bg-black/70 border border-white/20 text-white placeholder-slate-400 font-mono text-xs focus:outline-none focus:border-cyan-400 transition-colors"
+                  className="w-full min-h-[48px] px-5 py-3.5 rounded-full bg-black/80 border border-white/20 text-white placeholder-slate-400 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all shadow-inner"
                 />
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF] text-ocean-950 font-syne font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(46,196,182,0.6)] transition-all whitespace-nowrap cursor-pointer disabled:opacity-70"
+                  className="w-full sm:w-auto min-h-[48px] px-8 py-3.5 rounded-full bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF] text-black font-syne font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(46,196,182,0.6)] active:scale-95 transition-all whitespace-nowrap cursor-pointer disabled:opacity-70"
                 >
                   {loading ? (
-                    <Loader2 className="w-4 h-4 animate-spin text-ocean-950" />
+                    <Loader2 className="w-4 h-4 animate-spin text-black" />
                   ) : (
                     <>
                       <span>ME AVISE</span>

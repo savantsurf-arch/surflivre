@@ -88,9 +88,9 @@ export const VideoHub: React.FC<VideoHubProps> = ({ onSelectVideo }) => {
           </a>
         </div>
 
-        {/* Filter Pills: By Spot and Wave Type */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
-          <div className="flex items-center gap-1.5 text-slate-400 text-xs font-mono mr-2 uppercase shrink-0 font-bold">
+        {/* Filter Pills com Snap Scroll Mobile-First */}
+        <div className="flex items-center gap-3 overflow-x-auto pb-4 mb-8 snap-x snap-mandatory scrollbar-hide -mx-4 sm:mx-0 px-4 sm:px-0">
+          <div className="hidden sm:flex items-center gap-1.5 text-slate-400 text-xs font-mono mr-2 uppercase shrink-0 font-bold">
             <Filter className="w-3.5 h-3.5 text-[#2EC4B6]" />
             <span>FILTRAR:</span>
           </div>
@@ -98,14 +98,15 @@ export const VideoHub: React.FC<VideoHubProps> = ({ onSelectVideo }) => {
           {filterPills.map((pill) => (
             <button
               key={pill.key}
+              type="button"
               onClick={() => {
                 setSelectedFilter(pill.key);
                 setVisibleCount(6);
               }}
-              className={`px-4 py-2 rounded-full text-xs font-mono tracking-wider whitespace-nowrap transition-all cursor-pointer ${
+              className={`snap-center whitespace-nowrap flex-shrink-0 min-h-[44px] px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider font-bold transition-all cursor-pointer border active:scale-95 ${
                 selectedFilter === pill.key
-                  ? 'bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF] text-ocean-950 font-bold shadow-[0_0_15px_rgba(46,196,182,0.4)]'
-                  : 'bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10'
+                  ? 'bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF] text-ocean-950 border-cyan-300 shadow-[0_0_20px_rgba(46,196,182,0.45)]'
+                  : 'bg-black/60 border-white/10 text-slate-300 hover:text-white hover:border-cyan-400/40 hover:bg-white/5'
               }`}
             >
               {pill.label}
