@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { MarqueeTicker } from './components/MarqueeTicker';
+import { PartnersSection } from './components/PartnersSection';
 import { VideoHub } from './components/VideoHub';
 import { realVideos } from './data/realVideos';
 import type { VideoSession } from './data/realVideos';
@@ -19,7 +20,7 @@ export function App() {
   const [activeCinemaVideo, setActiveCinemaVideo] = useState<VideoSession | null>(null);
 
   const handleEnterWave = () => {
-    const target = document.getElementById('videos') || document.getElementById('destinos');
+    const target = document.getElementById('parceiros') || document.getElementById('videos');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
@@ -68,6 +69,8 @@ export function App() {
         />
 
         <MarqueeTicker />
+
+        <PartnersSection />
 
         <VideoHub
           onSelectVideo={(video) => setActiveCinemaVideo(video)}
