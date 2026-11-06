@@ -9,29 +9,18 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onEnterWave, onWatchVideos }) => {
   return (
     <section id="inicio" className="relative w-full h-[100svh] min-h-[660px] flex items-center justify-center overflow-hidden">
-      {/* Background Cinematic Video with Dark Overlay */}
+      {/* Background Hero Surfer Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1920&q=80"
-          className="w-full h-full object-cover scale-105 animate-[float_16s_ease-in-out_infinite_alternate]"
-        >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-slow-motion-of-a-wave-breaking-in-the-ocean-1240-large.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-surfer-riding-inside-a-wave-barrel-40748-large.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <img
+          src="/hero_surfer.jpg"
+          alt="Surfista em ação manobrando na onda em Olivença - Surf Livre"
+          className="w-full h-full object-cover object-center scale-105 animate-[float_20s_ease-in-out_infinite_alternate]"
+          loading="eager"
+        />
 
         {/* Triple Dark Contrast Overlay (ensuring high WCAG contrast) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-black/85" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-950/30 via-transparent to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#010206] via-[#010206]/55 to-black/75" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-950/25 via-transparent to-black/85" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(46,196,182,0.03)_1px,transparent_1px)] bg-[size:100%_4px] pointer-events-none" />
       </div>
 
