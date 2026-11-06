@@ -12,7 +12,6 @@ import { SpotsVisualGrid } from './components/SpotsVisualGrid';
 import { SurfTripAndMerch } from './components/SurfTripAndMerch';
 import { SwellJournal } from './components/SwellJournal';
 import { InstagramFeed } from './components/InstagramFeed';
-import { SurfFilmGallery } from './components/SurfFilmGallery';
 import { CommunitySection } from './components/CommunitySection';
 import { Newsletter } from './components/Newsletter';
 import { Footer } from './components/Footer';
@@ -102,10 +101,7 @@ export function App() {
         {/* 7. Instagram Oficial */}
         <InstagramFeed />
 
-        {/* 8. Galeria Surf Film */}
-        <SurfFilmGallery />
-
-        {/* 9. Comunidade & Envie sua Sessão (UGC) */}
+        {/* 8. Comunidade & Envie sua Sessão (UGC) */}
         <CommunitySection />
 
         {/* 10. Alerta de Swell com Formspree */}
