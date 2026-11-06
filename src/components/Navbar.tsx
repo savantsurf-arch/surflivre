@@ -22,7 +22,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onEnterWave }) => {
   }, []);
 
   const navLinks = [
-    { label: 'EXPLORE', href: '#explore' },
     { label: 'SESSÕES', href: '#sessoes' },
     { label: 'VÍDEOS', href: '#videos' },
     { label: 'DESTINOS', href: '#destinos' },
