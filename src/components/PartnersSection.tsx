@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Flame, Sun, Sparkles, CheckCircle2, ArrowRight, ExternalLink, Award } from 'lucide-react';
+import { ShieldCheck, Flame, Sun, Sparkles, CheckCircle2, ArrowRight, ExternalLink, Award, ShoppingCart } from 'lucide-react';
 import { InstagramIcon } from './SocialIcons';
+
+export const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.48-8.413Z"/>
+  </svg>
+);
 
 export const PartnersSection: React.FC = () => {
   const [activeTemp, setActiveTemp] = useState<'quente' | 'morna' | 'fria'>('quente');
@@ -28,6 +34,11 @@ export const PartnersSection: React.FC = () => {
       color: 'from-blue-400 to-indigo-500',
     },
   };
+
+  const whatsappMessage = encodeURIComponent(
+    'Olá! Vim pelo site oficial do Surf Livre e quero garantir minha Parafina Intense Wax artesanal de 70g!'
+  );
+  const whatsappUrl = `https://wa.me/5573999999999?text=${whatsappMessage}`;
 
   return (
     <section id="parceiros" className="relative py-28 bg-[#02050e] overflow-hidden border-t border-white/5">
@@ -72,17 +83,21 @@ export const PartnersSection: React.FC = () => {
           <div className="lg:col-span-6 relative bg-gradient-to-b from-[#060c1c] to-[#02050e] rounded-3xl border border-yellow-500/20 p-6 sm:p-8 flex flex-col justify-between shadow-2xl overflow-hidden group">
             {/* Ambient Background Logo Watermark */}
             <div className="absolute -top-10 -right-10 w-64 h-64 opacity-5 pointer-events-none">
-              <img src="/partners/intense_wax_logo.png" alt="Intense Wax" className="w-full h-full object-contain" />
+              <img
+                src="/partners/intense_wax_logo.png"
+                alt="Logo da Parafina Intense Wax - Parceiro Surf Livre"
+                className="w-full h-full object-contain"
+              />
             </div>
 
             {/* Product Image Stage */}
             <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-white/10 mb-6 bg-black/40 shadow-inner group/img">
               <img
                 src="/partners/intense_wax_products.jpg"
-                alt="Parafina Intense Wax Artesanal - Linha Completa"
+                alt="Caixas da Parafina Intense Wax Artesanal 70g - Fórmulas Água Quente, Morna e Fria para surf na Bahia"
                 className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20" />
 
               {/* Floating Badge on Photo */}
               <div className="absolute top-4 left-4">
@@ -103,7 +118,11 @@ export const PartnersSection: React.FC = () => {
                   </span>
                 </div>
                 <div className="w-12 h-12 rounded-full p-1 bg-black/60 border border-yellow-400/40 backdrop-blur-md shrink-0">
-                  <img src="/partners/intense_wax_logo.png" alt="Logo" className="w-full h-full object-contain" />
+                  <img
+                    src="/partners/intense_wax_logo.png"
+                    alt="Selo Intense Wax"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </div>
@@ -146,14 +165,18 @@ export const PartnersSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Why Intense Wax + Features (6 cols) */}
+          {/* Right Column: Why Intense Wax + Conversion / Direct Buy (6 cols) */}
           <div className="lg:col-span-6 bg-gradient-to-b from-[#060c1c] to-[#02050e] rounded-3xl border border-cyan-500/20 p-6 sm:p-8 flex flex-col justify-between shadow-2xl">
             
             {/* Top Brand Block with Floating Logo */}
             <div>
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl p-2 bg-gradient-to-br from-yellow-400/20 to-cyan-500/20 border border-yellow-400/40 shadow-[0_0_30px_rgba(250,204,21,0.2)] shrink-0 flex items-center justify-center">
-                  <img src="/partners/intense_wax_logo.png" alt="Intense Wax Logo" className="w-full h-full object-contain" />
+                  <img
+                    src="/partners/intense_wax_logo.png"
+                    alt="Logo oficial da parafina Intense Wax"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
@@ -173,7 +196,6 @@ export const PartnersSection: React.FC = () => {
               {/* 4 Core Pillars */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                 
-                {/* Pillar 1 */}
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-yellow-400/30 transition-all">
                   <div className="flex items-center gap-2 text-yellow-400 mb-1.5 font-mono text-xs font-bold uppercase">
                     <Flame className="w-4 h-4 fill-yellow-400" />
@@ -184,7 +206,6 @@ export const PartnersSection: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Pillar 2 */}
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-yellow-400/30 transition-all">
                   <div className="flex items-center gap-2 text-amber-300 mb-1.5 font-mono text-xs font-bold uppercase">
                     <Sun className="w-4 h-4" />
@@ -195,7 +216,6 @@ export const PartnersSection: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Pillar 3 */}
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all">
                   <div className="flex items-center gap-2 text-cyan-300 mb-1.5 font-mono text-xs font-bold uppercase">
                     <ShieldCheck className="w-4 h-4" />
@@ -206,7 +226,6 @@ export const PartnersSection: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Pillar 4 */}
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all">
                   <div className="flex items-center gap-2 text-emerald-400 mb-1.5 font-mono text-xs font-bold uppercase">
                     <CheckCircle2 className="w-4 h-4" />
@@ -229,27 +248,41 @@ export const PartnersSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Action Buttons: Contact / Instagram */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
+            {/* Direct Conversion Actions: WhatsApp Buy + Instagram Link */}
+            <div className="space-y-3 pt-2">
               <a
-                href="https://www.instagram.com/intensewax/"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:flex-1 py-3.5 rounded-full bg-gradient-to-r from-yellow-400 via-amber-300 to-[#2EC4B6] text-ocean-950 font-syne font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] transition-all cursor-pointer transform hover:-translate-y-0.5 active:scale-95"
+                className="w-full py-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-400 text-ocean-950 font-syne font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.7)] transition-all cursor-pointer transform hover:-translate-y-0.5 active:scale-95"
               >
-                <InstagramIcon className="w-4 h-4 fill-ocean-950" />
-                <span>CONHEÇA A @INTENSEWAX</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <WhatsAppIcon className="w-5 h-5 fill-ocean-950" />
+                <span>COMPRAR PELO WHATSAPP (PEDIDO DIRETO)</span>
+                <ShoppingCart className="w-4 h-4" />
               </a>
 
-              <a
-                href="#destinos"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/5 border border-white/10 hover:border-yellow-400/40 text-slate-300 hover:text-white font-syne font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-all cursor-pointer"
-              >
-                <span>VER O MAR HOJE</span>
-                <ArrowRight className="w-3.5 h-3.5 text-yellow-400" />
-              </a>
+              <div className="flex flex-col sm:flex-row items-center gap-3">
+                <a
+                  href="https://www.instagram.com/intensewax/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:flex-1 py-3 rounded-full bg-white/5 border border-white/10 hover:border-yellow-400/40 text-slate-200 hover:text-white font-syne font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-all cursor-pointer"
+                >
+                  <InstagramIcon className="w-4 h-4 text-pink-400" />
+                  <span>VER NO INSTAGRAM @INTENSEWAX</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-yellow-400" />
+                </a>
+
+                <a
+                  href="#destinos"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-white font-syne font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-all cursor-pointer"
+                >
+                  <span>RADAR DO MAR</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
+                </a>
+              </div>
             </div>
+
           </div>
         </div>
 

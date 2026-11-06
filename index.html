@@ -3,21 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/surflivre_logo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>SURF LIVRE — Entre na Onda | Viva o Mar. Viva a Sessão.</title>
-    <meta name="description" content="A experiência digital definitiva do canal e comunidade SURF LIVRE. Surf film, viagens, sessões épicas, lifestyle e cultura de praia de Olivença (Bahia) para o mundo." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>SURF LIVRE — Entre na Onda | Radar do Mar de Olivença, Sessões e Parafina Intense Wax</title>
+    <meta name="title" content="SURF LIVRE — Entre na Onda | Radar do Mar de Olivença, Sessões e Parafina Intense Wax" />
+    <meta name="description" content="A experiência digital definitiva do canal e comunidade SURF LIVRE em Olivença e Ilhéus (Bahia). Condições e radar de ondas em tempo real, vídeos de surf nos slabs do Backdoor, Batuba e Tiririca, e a parceria com a Parafina Intense Wax." />
+    <meta name="keywords" content="surf livre, surf olivença, praia do backdoor, batuba surf, ilhéus surf, itacaré tiririca, parafina intense wax, previsão surf bahia, surfguru olivença" />
+    <meta name="author" content="Surf Livre" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://surflivre-oficial.vercel.app/" />
     <meta name="theme-color" content="#030712" />
 
-    <!-- Open Graph / Meta -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="SURF LIVRE — Entre na Onda" />
-    <meta property="og:description" content="Viva o mar. Viva a sessão. Vídeos, viagens, lifestyle e comunidade de surf autêntica." />
-    <meta property="og:image" content="/surflivre_logo.jpg" />
+    <meta property="og:url" content="https://surflivre-oficial.vercel.app/" />
+    <meta property="og:title" content="SURF LIVRE — Viva o Mar. Viva a Sessão." />
+    <meta property="og:description" content="Radar costeiro ao vivo de Olivença, sessões reais no Backdoor, Batuba e Tiririca, e o grip artesanal da Parafina Intense Wax." />
+    <meta property="og:image" content="https://surflivre-oficial.vercel.app/surflivre_logo_hd.png" />
+    <meta property="og:image:alt" content="Logo oficial do Surf Livre em alta definição" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Surf Livre" />
 
-    <!-- Google Fonts: Syne (Display/Bold), Plus Jakarta Sans (Clean body), Space Mono (Editorial stamps) -->
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://surflivre-oficial.vercel.app/" />
+    <meta name="twitter:title" content="SURF LIVRE — Entre na Onda (Olivença, Bahia)" />
+    <meta name="twitter:description" content="Radar costeiro de surf ao vivo, vídeos do canal e o grip da Parafina Intense Wax." />
+    <meta name="twitter:image" content="https://surflivre-oficial.vercel.app/surflivre_logo_hd.png" />
+    <meta name="twitter:image:alt" content="SURF LIVRE - A plataforma definitiva do surf baiano" />
+
+    <!-- Resource Preconnects for Ultra-Fast Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="dns-prefetch" href="https://marine-api.open-meteo.com">
+    
+    <!-- Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD Schema.org): SportsActivityLocation & VideoObject & Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://surflivre-oficial.vercel.app/#organization",
+          "name": "Surf Livre",
+          "url": "https://surflivre-oficial.vercel.app/",
+          "logo": "https://surflivre-oficial.vercel.app/surflivre_logo_hd.png",
+          "sameAs": [
+            "https://www.youtube.com/@surflivre_",
+            "https://www.instagram.com/surflivre1/"
+          ],
+          "description": "Canal de surf, cultura de praia e comunidade nas bancadas de Olivença, Ilhéus e Costa do Cacau na Bahia."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://surflivre-oficial.vercel.app/#website",
+          "url": "https://surflivre-oficial.vercel.app/",
+          "name": "Surf Livre Oficial",
+          "publisher": { "@id": "https://surflivre-oficial.vercel.app/#organization" }
+        },
+        {
+          "@type": "SportsActivityLocation",
+          "name": "Praia do Backdoor",
+          "description": "Laje rasa de pedra e bancada que projeta tubos rápidos e cavados na maré seca com ondulação de Sul.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Olivença",
+            "addressRegion": "BA",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -14.956,
+            "longitude": -39.006
+          }
+        },
+        {
+          "@type": "SportsActivityLocation",
+          "name": "Praia de Batuba",
+          "description": "Pico de força bruta e volume d'água em Olivença, seguro para as maiores ressacas de inverno.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Olivença",
+            "addressRegion": "BA",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -14.965,
+            "longitude": -39.008
+          }
+        },
+        {
+          "@type": "SportsActivityLocation",
+          "name": "Praia da Tiririca",
+          "description": "A meca do surf de alta performance na Costa do Cacau com ondas fortes, cavadas e tubulares.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Itacaré",
+            "addressRegion": "BA",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -14.283,
+            "longitude": -38.989
+          }
+        },
+        {
+          "@type": "VideoObject",
+          "name": "O backdoor acordou para o surf",
+          "description": "Sessão de surf nas altas ondas do Backdoor em Olivença, Ilhéus Bahia pelo canal Surf Livre.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/ksH4xyUWZ_A/hq720.jpg",
+          "uploadDate": "2024-08-01",
+          "contentUrl": "https://www.youtube.com/watch?v=ksH4xyUWZ_A",
+          "embedUrl": "https://www.youtube.com/embed/ksH4xyUWZ_A"
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#030712] text-slate-100 selection:bg-[#2EC4B6] selection:text-black antialiased overflow-x-hidden">
     <div id="root"></div>
