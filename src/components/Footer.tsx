@@ -37,12 +37,13 @@ export const Footer: React.FC = () => {
             </span>
             <ul className="space-y-2 text-xs font-mono tracking-wider">
               <li><a href="#" className="hover:text-[#2EC4B6] transition-colors">INÍCIO</a></li>
-              <li><a href="#explore" className="hover:text-[#2EC4B6] transition-colors">QUAL É A SUA ONDA</a></li>
-              <li><a href="#sessoes" className="hover:text-[#2EC4B6] transition-colors">A SESSÃO COMEÇA</a></li>
-              <li><a href="#videos" className="hover:text-[#2EC4B6] transition-colors">ÚLTIMAS SESSÕES</a></li>
-              <li><a href="#destinos" className="hover:text-[#2EC4B6] transition-colors">ONDE A ONDA NOS LEVA</a></li>
-              <li><a href="#galeria" className="hover:text-[#2EC4B6] transition-colors">SURF FILM GALERIA</a></li>
-              <li><a href="#comunidade" className="hover:text-[#2EC4B6] transition-colors">COMUNIDADE</a></li>
+              <li><a href="#radar" className="hover:text-[#2EC4B6] transition-colors">RADAR DO MAR</a></li>
+              <li><a href="#picos" className="hover:text-[#2EC4B6] transition-colors">GUIA DE PICOS</a></li>
+              <li><a href="#parafina" className="hover:text-[#2EC4B6] transition-colors">PARAFINA INTENSE WAX</a></li>
+              <li><a href="#videos" className="hover:text-[#2EC4B6] transition-colors">VÍDEOS & SESSÕES</a></li>
+              <li><a href="#diario" className="hover:text-[#2EC4B6] transition-colors">DIÁRIO DO SWELL</a></li>
+              <li><a href="#merch" className="hover:text-[#2EC4B6] transition-colors">LOJA & GUIA</a></li>
+              <li><a href="#comunidade" className="hover:text-[#2EC4B6] transition-colors">COMUNIDADE (UGC)</a></li>
             </ul>
           </div>
 

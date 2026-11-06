@@ -8,6 +8,7 @@ import { realVideos } from './data/realVideos';
 import type { VideoSession } from './data/realVideos';
 import { CinemaModal } from './components/CinemaModal';
 import { InteractiveMap } from './components/InteractiveMap';
+import { SurfGuruCard } from './components/SurfGuruCard';
 import { SpotsVisualGrid } from './components/SpotsVisualGrid';
 import { SurfTripAndMerch } from './components/SurfTripAndMerch';
 import { SwellJournal } from './components/SwellJournal';
@@ -79,6 +80,11 @@ export function App() {
         <InteractiveMap
           onPlaySpotVideo={handlePlayCustomVideo}
         />
+
+        {/* Gateway Card Oficial SurfGuru */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 mb-20 relative z-20">
+          <SurfGuruCard />
+        </div>
 
         {/* 2. Guia Visual dos Picos (Visual > Texto) */}
         <SpotsVisualGrid
