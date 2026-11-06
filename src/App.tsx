@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar } from './components/Navbar';
+import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { MarqueeTicker } from './components/MarqueeTicker';
 import { PartnersSection } from './components/PartnersSection';
@@ -20,7 +20,7 @@ export function App() {
   const [activeCinemaVideo, setActiveCinemaVideo] = useState<VideoSession | null>(null);
 
   const handleEnterWave = () => {
-    const target = document.getElementById('parceiros') || document.getElementById('videos');
+    const target = document.getElementById('radar') || document.getElementById('sessoes');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
@@ -57,10 +57,7 @@ export function App() {
       <WaterCursor />
       <FilmGrain />
 
-      <Navbar
-        onEnterWave={handleEnterWave}
-        onOpenCinema={handleWatchVideos}
-      />
+      <Header />
 
       <main className="relative z-10">
         <Hero

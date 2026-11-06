@@ -41,7 +41,7 @@ export const PartnersSection: React.FC = () => {
   const whatsappUrl = `https://wa.me/5573999999999?text=${whatsappMessage}`;
 
   return (
-    <section id="parceiros" className="relative py-28 bg-[#02050e] overflow-hidden border-t border-white/5">
+    <section id="parafina" className="relative py-28 bg-[#02050e] overflow-hidden border-t border-white/5">
       {/* Dynamic Lighting Glows */}
       <div className="absolute top-1/4 right-1/4 w-[550px] h-[550px] bg-yellow-500/10 rounded-full blur-[180px] pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none" />

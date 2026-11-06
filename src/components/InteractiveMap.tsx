@@ -285,7 +285,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ onPlaySpotVideo 
   const displayJoulesPercent = (liveData && selectedSpot.city === 'Olivença') ? liveData.joulesPercent : selectedSpot.joulesPercent;
 
   return (
-    <section id="destinos" className="relative py-28 bg-[#02050e] overflow-hidden border-t border-white/5">
+    <section id="radar" className="relative py-28 bg-[#02050e] overflow-hidden border-t border-white/5">
       <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[140px] pointer-events-none" />
 

@@ -54,7 +54,7 @@ export const VideoHub: React.FC<VideoHubProps> = ({ onSelectVideo }) => {
   };
 
   return (
-    <section id="videos" className="relative py-28 bg-[#02050e] border-t border-white/5">
+    <section id="sessoes" className="relative py-28 bg-[#02050e] border-t border-white/5">
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
 
