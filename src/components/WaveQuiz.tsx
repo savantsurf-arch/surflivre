@@ -30,7 +30,7 @@ const quizOptions: QuizOption[] = [
   },
   {
     id: 'evoluindo',
-    emoji: '🏄',
+    emoji: '🏄‍♂️',
     title: 'EVOLUINDO',
     subtitle: 'Cortando a parede, rasgadas e leitura de mar',
     badge: 'LINHA & PROGRESSÃO',
@@ -84,7 +84,6 @@ export const WaveQuiz: React.FC = () => {
 
   const handleSelect = (option: QuizOption) => {
     setSelected(option);
-    // Trigger radical confetti blast
     try {
       confetti({
         particleCount: 80,
@@ -92,7 +91,7 @@ export const WaveQuiz: React.FC = () => {
         origin: { y: 0.6 },
         colors: ['#2EC4B6', '#00F0FF', '#ffffff', '#0284c7'],
       });
-    } catch (e) {
+    } catch {
       // safe fallback
     }
   };
@@ -114,16 +113,15 @@ export const WaveQuiz: React.FC = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Header */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-400/30 mb-4">
-          <Sparkles className="w-4 h-4 text-cyan-300" />
-          <span className="text-xs font-mono tracking-widest text-cyan-300 uppercase">
-            EXPERIÊNCIA INTERATIVA
-          </span>
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-400/30 text-[#2EC4B6] text-xs font-mono tracking-widest uppercase mb-4 shadow-sm">
+          <Sparkles className="w-3.5 h-3.5 text-[#00F0FF]" />
+          <span>EXPERIÊNCIA INTERATIVA</span>
         </div>
 
-        <h2 className="font-syne font-black text-4xl sm:text-6xl md:text-7xl uppercase tracking-tight text-white mb-4">
-          QUAL É A SUA <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2EC4B6] to-sky-400">ONDA?</span>
+        <h2 className="font-syne font-black text-4xl sm:text-6xl uppercase tracking-tight text-white mb-4">
+          QUAL É A SUA <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2EC4B6] to-[#00F0FF]">ONDA?</span>
         </h2>
+
         <p className="font-mono text-xs sm:text-sm text-slate-400 max-w-xl mx-auto uppercase tracking-wider mb-12">
           Escolha o seu momento no mar e receba a frequência da sua sessão:
         </p>
@@ -170,7 +168,7 @@ export const WaveQuiz: React.FC = () => {
               </div>
               <button
                 onClick={() => setSelected(null)}
-                className="p-2 rounded-full hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
+                className="p-2 rounded-full hover:bg-white/10 text-slate-400 hover:text-white transition-colors cursor-pointer"
                 title="Tentar novamente"
               >
                 <RotateCcw className="w-4 h-4" />
@@ -207,7 +205,7 @@ export const WaveQuiz: React.FC = () => {
 
               <button
                 onClick={handleShare}
-                className="w-full sm:w-auto px-6 py-3 rounded-full bg-white/5 border border-white/20 text-white font-syne font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-colors"
+                className="w-full sm:w-auto px-6 py-3 rounded-full bg-white/5 border border-white/20 text-white font-syne font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-colors cursor-pointer"
               >
                 {copied ? <CheckCircle2 className="w-4 h-4 text-emerald-400" /> : <Share2 className="w-4 h-4" />}
                 <span>{copied ? 'COPIADO COM SUCESSO!' : 'COMPARTILHAR RESULTADO'}</span>
