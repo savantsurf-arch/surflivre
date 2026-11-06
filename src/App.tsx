@@ -8,6 +8,9 @@ import { realVideos } from './data/realVideos';
 import type { VideoSession } from './data/realVideos';
 import { CinemaModal } from './components/CinemaModal';
 import { InteractiveMap } from './components/InteractiveMap';
+import { SpotsVisualGrid } from './components/SpotsVisualGrid';
+import { SurfTripAndMerch } from './components/SurfTripAndMerch';
+import { SwellJournal } from './components/SwellJournal';
 import { InstagramFeed } from './components/InstagramFeed';
 import { SurfFilmGallery } from './components/SurfFilmGallery';
 import { CommunitySection } from './components/CommunitySection';
@@ -15,6 +18,7 @@ import { Newsletter } from './components/Newsletter';
 import { Footer } from './components/Footer';
 import { WaterCursor } from './components/WaterCursor';
 import { FilmGrain } from './components/FilmGrain';
+import { FloatingSwellButton } from './components/FloatingSwellButton';
 
 export function App() {
   const [activeCinemaVideo, setActiveCinemaVideo] = useState<VideoSession | null>(null);
@@ -53,10 +57,14 @@ export function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#030712] text-slate-100 selection:bg-[#2EC4B6] selection:text-black overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#010206] text-slate-100 selection:bg-[#2EC4B6] selection:text-black overflow-x-hidden">
       <WaterCursor />
       <FilmGrain />
 
+      {/* Floating Action Button (FAB Pé na Areia) */}
+      <FloatingSwellButton />
+
+      {/* Sticky Header com Duplo CTA */}
       <Header />
 
       <main className="relative z-10">
@@ -67,20 +75,40 @@ export function App() {
 
         <MarqueeTicker />
 
-        <PartnersSection />
-
-        <VideoHub
-          onSelectVideo={(video) => setActiveCinemaVideo(video)}
-        />
-
+        {/* 1. Radar Costeiro & Telemetria ao Vivo */}
         <InteractiveMap
           onPlaySpotVideo={handlePlayCustomVideo}
         />
 
+        {/* 2. Guia Visual dos Picos (Visual > Texto) */}
+        <SpotsVisualGrid
+          onPlaySpotVideo={handlePlayCustomVideo}
+        />
+
+        {/* 3. Parceria Oficial: Parafina Intense Wax */}
+        <PartnersSection />
+
+        {/* 4. Vídeos Reais do Canal com Filtros e Lite Embed */}
+        <VideoHub
+          onSelectVideo={(video) => setActiveCinemaVideo(video)}
+        />
+
+        {/* 5. Diário do Swell (Jornalismo de Surf para SEO de Cauda Longa) */}
+        <SwellJournal />
+
+        {/* 6. Guia do Viajante & Drop Oficial (Merch) */}
+        <SurfTripAndMerch />
+
+        {/* 7. Instagram Oficial */}
         <InstagramFeed />
 
+        {/* 8. Galeria Surf Film */}
         <SurfFilmGallery />
+
+        {/* 9. Comunidade & Envie sua Sessão (UGC) */}
         <CommunitySection />
+
+        {/* 10. Alerta de Swell com Formspree */}
         <Newsletter />
       </main>
 
