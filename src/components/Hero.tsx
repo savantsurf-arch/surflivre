@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onEnterWave, onWatchVideos }) => {
 
         {/* Tagline */}
         <h1 className="font-mono text-sm sm:text-lg md:text-xl text-slate-200 tracking-[0.25em] uppercase max-w-2xl mx-auto mb-8 font-bold drop-shadow-md">
-          “VIVA O MAR. VIVA A SESSÃO.”
+          “FALA GALERA SURFLIVRE NA ÁREA”
         </h1>
 
         {/* Hierarchy of CTAs */}

@@ -3,7 +3,7 @@ import React from 'react';
 export const MarqueeTicker: React.FC = () => {
   const items = [
     'SURF LIVRE',
-    'VIVA O MAR. VIVA A SESSÃO.',
+    'FALA GALERA SURFLIVRE NA ÁREA',
     'PRAIA DO BACKDOOR',
     'OLIVENÇA - ILHÉUS - BAHIA',
     'TUBOS PESADOS',
