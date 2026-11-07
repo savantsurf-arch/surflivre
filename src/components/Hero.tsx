@@ -10,19 +10,21 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onEnterWave, onWatchVideos }) => {
   return (
     <section id="inicio" className="relative w-full h-[100svh] min-h-[660px] flex items-center justify-center overflow-hidden">
-      {/* Background Hero Surfer Image with Dark Overlay */}
+      {/* Background Hero Surfer Image with Optimized Quality and High Definition */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/hero_surfer.jpg"
-          alt="Surfista em ação manobrando na onda em Olivença - Surf Livre"
-          className="w-full h-full object-cover object-center scale-105 animate-[float_20s_ease-in-out_infinite_alternate]"
-          loading="eager"
-        />
+        <picture className="w-full h-full">
+          <source media="(min-width: 768px)" srcSet="/hero_surfer_desktop.jpg" />
+          <img
+            src="/hero_surfer.jpg"
+            alt="Surfista em ação manobrando na onda em Olivença - Surf Livre"
+            className="w-full h-full object-cover object-[50%_35%]"
+            loading="eager"
+          />
+        </picture>
 
-        {/* Triple Dark Contrast Overlay (ensuring high WCAG contrast) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#010206] via-[#010206]/55 to-black/75" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-950/25 via-transparent to-black/85" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(46,196,182,0.03)_1px,transparent_1px)] bg-[size:100%_4px] pointer-events-none" />
+        {/* Balanced Cinematic Overlays (sharp clarity for wave & surfer, high contrast for text) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#010206] via-[#010206]/40 to-black/60" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-950/15 via-transparent to-black/75" />
       </div>
 
       {/* Main Center Stage */}
