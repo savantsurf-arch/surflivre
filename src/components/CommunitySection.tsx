@@ -77,7 +77,7 @@ export const CommunitySection: React.FC = () => {
             </button>
 
             <a
-              href={`https://wa.me/5573999999999?text=${whatsappUgcMsg}`}
+              href={`https://wa.me/5573988582994?text=${whatsappUgcMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/5 border border-white/20 text-white font-syne font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition-colors cursor-pointer"

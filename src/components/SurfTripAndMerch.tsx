@@ -141,7 +141,7 @@ export const SurfTripAndMerch: React.FC = () => {
                     {item.highlight}
                   </span>
                   <a
-                    href="https://wa.me/5573999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20Surf%20Livre%20e%20gostaria%20de%20dicas%20do%20Guia%20do%20Viajante%20em%20Oliven%C3%A7a!"
+                    href="https://wa.me/5573988582994?text=Ol%C3%A1!%20Vim%20pelo%20site%20Surf%20Livre%20e%20gostaria%20de%20dicas%20do%20Guia%20do%20Viajante%20em%20Oliven%C3%A7a!"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white"
@@ -188,7 +188,7 @@ export const SurfTripAndMerch: React.FC = () => {
                 </div>
 
                 <a
-                  href={`https://wa.me/5573999999999?text=${whatsappMerchMsg(item.name)}`}
+                  href={`https://wa.me/5573988582994?text=${whatsappMerchMsg(item.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-syne font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_20px_rgba(250,204,21,0.4)] transition-all cursor-pointer transform hover:-translate-y-0.5 active:scale-95"

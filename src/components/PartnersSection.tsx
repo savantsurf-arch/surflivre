@@ -38,7 +38,7 @@ export const PartnersSection: React.FC = () => {
   const whatsappMessage = encodeURIComponent(
     'Olá! Vim pelo site oficial do Surf Livre e quero garantir minha Parafina Intense Wax artesanal de 70g!'
   );
-  const whatsappUrl = `https://wa.me/5573999999999?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/5573988582994?text=${whatsappMessage}`;
 
   return (
     <section id="parafina" className="relative py-28 bg-[#02050e] overflow-hidden border-t border-white/5">
@@ -254,11 +254,28 @@ export const PartnersSection: React.FC = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-400 text-ocean-950 font-syne font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.7)] transition-all cursor-pointer transform hover:-translate-y-0.5 active:scale-95"
+                aria-label="Comprar Parafina Intense Wax pelo WhatsApp no número (73) 8858-2994"
+                className="group relative w-full min-h-[60px] px-5 sm:px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#25D366] via-[#22c55e] to-[#128C7E] text-[#02050e] shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:shadow-[0_0_45px_rgba(37,211,102,0.7)] transition-all duration-300 flex items-center justify-between gap-3 active:scale-[0.98] cursor-pointer"
               >
-                <WhatsAppIcon className="w-5 h-5 fill-ocean-950" />
-                <span>COMPRAR PELO WHATSAPP (PEDIDO DIRETO)</span>
-                <ShoppingCart className="w-4 h-4" />
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-10 h-10 rounded-xl bg-black/15 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <WhatsAppIcon className="w-5 h-5 fill-[#02050e]" />
+                  </div>
+                  <div className="flex flex-col text-left min-w-0">
+                    <span className="font-syne font-black text-xs sm:text-sm uppercase tracking-wide leading-tight text-[#02050e] truncate">
+                      COMPRAR PELO WHATSAPP
+                    </span>
+                    <span className="font-mono text-[11px] font-bold text-[#02050e]/85 tracking-wider mt-0.5">
+                      (73) 8858-2994 • PEDIDO DIRETO
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase bg-black/15 px-3 py-1.5 rounded-full text-[#02050e] shrink-0">
+                  <span className="hidden sm:inline">GARANTIR</span>
+                  <ShoppingCart className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
               </a>
 
               <div className="flex flex-col sm:flex-row items-center gap-3">
